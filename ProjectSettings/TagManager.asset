@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Suelo
+  - Enemy
+  - Movable
+  - coin
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Surface
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1540903173
+    locked: 0
+  - name: BK1
+    uniqueID: 1072536959
+    locked: 0
+  - name: BK2
+    uniqueID: 3179053005
+    locked: 0
+  - name: BK3
+    uniqueID: 268566573
+    locked: 0
+  - name: New Layer
+    uniqueID: 1606137521
+    locked: 0
