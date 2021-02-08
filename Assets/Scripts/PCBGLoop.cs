@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PCBGLoop : MonoBehaviour
 {
+
+    //Clase de referencia. no se utiliza
     public Vector3 ini;
     public GameObject player;
     public GameObject fondo;

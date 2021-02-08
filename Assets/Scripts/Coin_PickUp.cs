@@ -14,6 +14,7 @@ public class Coin_PickUp : MonoBehaviour
         stop = false;
         
     }
+    //Control de pickupo de monedas por colisiones
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag=="Player" &&!stop)

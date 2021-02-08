@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordArea : MonoBehaviour
 {
-
+    //Simple control de colisiones con el arma para ataques
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")

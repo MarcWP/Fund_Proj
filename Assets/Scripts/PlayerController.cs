@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    //Efecto de retroceso al sufrir daño. El retroceso varía en función de la dirección al enemigo.
     void Hurt(GameObject monster)
     {   
         float dir = monster.transform.position.x - transform.position.x;

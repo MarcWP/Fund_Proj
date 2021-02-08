@@ -5,6 +5,8 @@ using UnityEngine;
 public class OnBorderLimit : MonoBehaviour
 {
 
+
+    //Clase de referencia. no utilizada
     private float length;
     private float startpos;
     public GameObject cam;

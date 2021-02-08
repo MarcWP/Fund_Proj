@@ -45,6 +45,7 @@ public class GrappleRope : MonoBehaviour
         isGrappling = false;
     }
 
+    //Puntos definidos para el line renderer
     private void LinePointsToFirePoint()
     {
         for (int i = 0; i < precision; i++)
@@ -59,7 +60,7 @@ public class GrappleRope : MonoBehaviour
         DrawRope();
 
     }
-
+    //dibujamos con linerenderer y llamamos a las clases de agarre requeridas
     void DrawRope()
     {
         if (!straightLine)
@@ -79,6 +80,7 @@ public class GrappleRope : MonoBehaviour
                     grapplingGun.Grapple();
                 isGrappling = true;
             }
+            //Control de ondas
             if (waveSize > 0)
             {
                 waveSize -= Time.deltaTime * straightenLineSpeed;
@@ -92,7 +94,7 @@ public class GrappleRope : MonoBehaviour
             }
         }
     }
-
+    //Si queremos un efecto onda en la cuerda
     void DrawRopeWaves()
     {
         for (int i = 0; i < precision; i++)
@@ -105,7 +107,7 @@ public class GrappleRope : MonoBehaviour
             m_lineRenderer.SetPosition(i, currentPosition);
         }
     }
-
+    //Si no queremos un efecto onda en la cuerda
     void DrawRopeNoWaves()
     {
         m_lineRenderer.SetPosition(0, grapplingGun.firePoint.position);

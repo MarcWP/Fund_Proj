@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
+    //Simple zona de muerte por colisiones
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag=="Player")

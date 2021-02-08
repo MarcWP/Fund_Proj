@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HookState : EnemyFSM
 {
+    //NO SE UTILIZA, PERTENECE A ITERACIÓN ANTERIOR DONDE PODÍAS AGARRAR ENEMIGOS
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

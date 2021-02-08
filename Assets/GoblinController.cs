@@ -28,7 +28,7 @@ public class GoblinController : MonoBehaviour
         GameEvent.current.onDestroy += Destroy;
     }
 
-    // Update is called once per frame
+    // Control de parámetros que necesitamos controlar
     void Update()
     {
         distance = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
@@ -36,6 +36,7 @@ public class GoblinController : MonoBehaviour
         //pos = transform.position;
         anim.SetFloat("health", HP);
     }
+    // Métodos de daños. Están localizado aquí por preferencia propia
     public void subHP()
     {
         HP -= 1;
@@ -45,6 +46,8 @@ public class GoblinController : MonoBehaviour
         if(gameObject.GetInstanceID()==id)
             anim.SetBool("hurt", true);
     }
+
+    //Perseguimos al jugador en función de la distancia al mismo
     public void seek()
     {
         dir=transform.position.x - player.transform.position.x;
@@ -59,7 +62,7 @@ public class GoblinController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x,transform.position.y, 0), Time.deltaTime*speed);
     }
 
-
+    //Si el jugador no está cerca, hacemos que los goblin se muevan aleatoriamente entre unos constraints predefinidos
     public void wander()
     {
         disToPoint = Vector3.Distance(new Vector3(transform.position.x, transform.position.y, 0), new Vector3(startPos.x + side, transform.position.y, 0));
@@ -78,7 +81,7 @@ public class GoblinController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(startPos.x + side, transform.position.y, 0), Time.deltaTime * speed);
         }
     }
-
+    //Desubscribimos eventos para la instancia de goblin
     private void Destroy(int id)
     {
         if (gameObject.GetInstanceID() == id)

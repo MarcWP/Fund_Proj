@@ -52,9 +52,9 @@ public class GrapplingGun : MonoBehaviour
 
     }
 
+    //Control de input del usuario a rappel
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Mouse1))
             SetGrapplePoint();
         else if (Input.GetKey(KeyCode.Mouse1))
@@ -82,7 +82,7 @@ public class GrapplingGun : MonoBehaviour
             RotateGun(mousePos, true);
         }
     }
-
+    //Rotación del grapplegun alrededor del pivote
     void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
     {
         Vector3 distanceVector = lookPoint - gunPivot.position;
@@ -94,7 +94,7 @@ public class GrapplingGun : MonoBehaviour
             gunPivot.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    //#######################################################################
+    //Punto de agarre
     void SetGrapplePoint()
     {
         Vector2 distanceVector = m_camera.ScreenToWorldPoint(Input.mousePosition) - gunPivot.position;
@@ -115,7 +115,7 @@ public class GrapplingGun : MonoBehaviour
     }
     //#######################################################################
     
-    //Aquí tengo que hacer, si se pulsa click derecho se hace un addForce al objeto picado en dirección al personaje
+    //efectos físicos del agarre mediante springjoint
     public void Grapple()
     {
 
@@ -137,6 +137,7 @@ public class GrapplingGun : MonoBehaviour
         }
     }
 
+    //atraer al enemigo si pulsamos espacio con click derecho
     public void GrappleEnemy()
     {
         Vector2 distVector = m_camera.ScreenToWorldPoint(Input.mousePosition) - gunPivot.position;

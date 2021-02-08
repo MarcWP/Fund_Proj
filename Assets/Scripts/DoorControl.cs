@@ -13,19 +13,20 @@ public class DoorControl : MonoBehaviour
         GameEvent.current.onAllPicked += closeLastDoor;
     }
 
-    // Update is called once per frame
+    // Cerrar instancias de puertas en función de su id
     void close(int id)
     {
         if(id==gameObject.GetInstanceID())
             anim.SetBool("cerrar", true);
     }
+    //En caso de recolectar todas las monedas
     void closeLastDoor()
     {
         anim.SetBool("cerrar", true);
 
     }
 
-    
+    //Desubscribimos
     private void OnDestroy()
     {
         GameEvent.current.onPlayerAction -= close;

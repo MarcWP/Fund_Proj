@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    //Clase no utilizada
     private void OnTriggerEnter(Collider other)
     {
         

@@ -100,12 +100,14 @@ public class GameEvent : MonoBehaviour
         }
     }
 
+    //pausa
     public event Action<int> onPause;
     public void Pause(int i)
     {
         onPause?.Invoke(i);
     }
 
+    //destrucción de objeto
     public event Action<int> onDestroy;
 
     public void Destroy(int id)
@@ -117,7 +119,7 @@ public class GameEvent : MonoBehaviour
     }
 
     public event Action onAllPicked;
-
+    //Si se recogen todas las monedas
     public void AllPicked()
     {
         if (onAllPicked != null)

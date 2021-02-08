@@ -18,12 +18,14 @@ public class CameraControl : MonoBehaviour
         width = height * cam.aspect;
     }
 
+    //Al desaparecer de la vista de la cámara, hacemos scroll
     private void OnBecameInvisible()
     {
+        
         viewPortPos = cam.WorldToViewportPoint(transform.position);
         print(viewPortPos);
 
-
+        //Pueede usarse cameradummy o cam en función de si se usa cameramachine o no
         if (viewPortPos.x > 1)
         {
             cameraDummy.transform.position = new Vector3(cameraDummy.transform.position.x+width, cameraDummy.transform.position.y, cameraDummy.transform.position.z);

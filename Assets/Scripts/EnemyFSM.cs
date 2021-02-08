@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyFSM : StateMachineBehaviour
 {
+    //Clase de referencia. Realmente no utilizada.
     public GameObject player;
     public GameObject monster;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
