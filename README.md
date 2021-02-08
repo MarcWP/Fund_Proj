@@ -24,7 +24,7 @@ El proyecto consiste en juego de plataformas y combate 2D. Dentro del juego, el 
 
 * Gancho: Uso de un gancho que puede utilizarse para colgarte y arrastrar para maniobrar por el entorno y resolver puzzles. El gancho fija el punto de agarre mediante raycast.
 ![alt tag](Media/Gif3.gif)
-![alt tag](Media/Gif3.gif)
+![alt tag](Media/Gif10.gif)
 
 * Eventos: Uso de eventos para controlar aspectos de la jugabilidad, como por ejemplo el control de la vida, la acción de palancas o las monedas.
 ![alt tag](Media/Gif6.gif)
