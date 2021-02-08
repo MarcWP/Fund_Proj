@@ -67,14 +67,13 @@ public class PlayerController : MonoBehaviour
         }
         
         //La propiedad grounded se gestiona en los "pies" del jugador
-        if (grounded)
-        {
-            if (Input.GetKey(KeyCode.W))
+
+            if (Input.GetKey(KeyCode.W) && (rigidbody2d.velocity.y==0f || grounded))
             {
                 rigidbody2d.velocity = Vector2.up * jumpSpeed;
                 grounded = false;
             }
-        }
+
 
         if (Input.GetKeyDown(KeyCode.P))
         {

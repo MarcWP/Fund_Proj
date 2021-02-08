@@ -9,6 +9,7 @@ public class CameraControl : MonoBehaviour
     private Vector3 viewPortPos;
     float height;
     float width;
+    public GameObject cameraDummy;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,19 +26,19 @@ public class CameraControl : MonoBehaviour
 
         if (viewPortPos.x > 1)
         {
-            cam.transform.position = new Vector3(cam.transform.position.x+width, cam.transform.position.y, cam.transform.position.z);
+            cameraDummy.transform.position = new Vector3(cameraDummy.transform.position.x+width, cameraDummy.transform.position.y, cameraDummy.transform.position.z);
         }
         else if(viewPortPos.x < 0)
         {
-            cam.transform.position = new Vector3(cam.transform.position.x-width, cam.transform.position.y, cam.transform.position.z);
+            cameraDummy.transform.position = new Vector3(cameraDummy.transform.position.x-width, cameraDummy.transform.position.y, cameraDummy.transform.position.z);
         }
         else if (viewPortPos.y >1f)
         {
-            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + height, cam.transform.position.z);
+            cameraDummy.transform.position = new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y + height, cameraDummy.transform.position.z);
         }
         else if (viewPortPos.y < 0f)
         {
-            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y - height, cam.transform.position.z);
+            cameraDummy.transform.position = new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y - height, cameraDummy.transform.position.z);
         }
 
     }
